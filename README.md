@@ -6,7 +6,7 @@ with nvme_core.io_timeout patch (otherwise will got extreme long boot time on so
 <br/>
 <br/>
 
-***original version***  
+***based on original old 4.14 version***  
 https://github.com/cx9208/bbrplus
 
 <br/>
