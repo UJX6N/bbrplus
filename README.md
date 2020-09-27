@@ -56,8 +56,8 @@ https://github.com/cx9208/bbrplus
 <br/>
 
 ***CentOS***  
-'sudo yum groupinstall Development tools'  
-'sudo yum install ncurses-devel bc gcc gcc-c++ ncurses ncurses-devel cmake elfutils-libelf-devel openssl-devel rpm-build redhat-rpm-config asciidoc hmaccalc perl-ExtUtils-Embed xmlto audit-libs-devel binutils-devel elfutils-devel elfutils-libelf-devel newt-devel python-devel zlib-devel'
+sudo yum groupinstall Development tools  
+sudo yum install ncurses-devel bc gcc gcc-c++ ncurses ncurses-devel cmake elfutils-libelf-devel openssl-devel rpm-build redhat-rpm-config asciidoc hmaccalc perl-ExtUtils-Embed xmlto audit-libs-devel binutils-devel elfutils-devel elfutils-libelf-devel newt-devel python-devel zlib-devel
 
 <br/>
 
@@ -66,8 +66,8 @@ press "y" key when asked
 <br/>
 
 ***Debian/Ubuntu***  
-'sudo apt install build-essential libncurses5-dev'  
-'sudo apt build-dep linux'
+sudo apt install build-essential libncurses5-dev  
+sudo apt build-dep linux
 
 <br/>
 
@@ -77,7 +77,7 @@ press "y" key when asked
 <br/>
 
 ### 7) config build parameters based on you current kernel settings
-        'make oldconfig'
+        make oldconfig
 
 <br/>
 
@@ -88,7 +88,7 @@ press Enter key when asked (if you dont know what is what)
 <br/>
 
 ### 8) disable debug info & module signing
-        'scripts/config --disable DEBUG_INFO && scripts/config --disable MODULE_SIG'
+        scripts/config --disable DEBUG_INFO && scripts/config --disable MODULE_SIG
 
 
 <br/>
@@ -99,12 +99,12 @@ press Enter key when asked (if you dont know what is what)
 <br/>
 
 ***CentOS***   
-'make rpm-pkg LOCALVERSION=-bbrplus 2>&1 | tee build.log'
+make rpm-pkg LOCALVERSION=-bbrplus 2>&1 | tee build.log
 
 <br/>
 
 ***Debian/Ubuntu***  
-'make deb-pkg LOCALVERSION=-bbrplus 2>&1 | tee build.log'
+make deb-pkg LOCALVERSION=-bbrplus 2>&1 | tee build.log
 
 <br/>
 
