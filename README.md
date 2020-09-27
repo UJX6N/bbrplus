@@ -1,5 +1,5 @@
 # bbrplus
-Linux bbrplus kernel 4.14 self-compiled version  
+Linux BBRplus Kernel 4.14 Self-compiled Version  
 with nvme_core.io_timeout patch (otherwise will got long boot time on some VMs, like AWS EC2 5th-Gen)
 
 <br/>
