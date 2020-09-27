@@ -14,7 +14,7 @@ https://github.com/cx9208/bbrplus
 <br/>
 
 ## patch & build bbrplus kernel youself
-
+(or you can use releases compiled by me in "Releases" section)      
 <br/>
 <br/>
 
