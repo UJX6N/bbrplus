@@ -76,12 +76,12 @@ press "y" key when asked
 <br/>
 <br/>
 
-### 7) config build parameters based on you current kernel settings
+### 7) config build parameters based on current kernel settings
         make oldconfig
 
 <br/>
 
-press Enter key when asked (if you dont know what is what)
+press Enter key when asked (if dont know what is what)
 
 
 <br/>
@@ -114,7 +114,7 @@ if anything goes wrong check the "build.log" file
 <br/>
 
 (if not failed on previous step)
-### 10) collect you kernel package files, do test on some other linux box
+### 10) collect your kernel package files, do test on some other linux box
 
 <br/>
 
