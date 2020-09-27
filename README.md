@@ -94,7 +94,7 @@ press Enter key when asked (if dont know what is what)
 <br/>
 <br/>
 
-### 9) build your kernel
+### 9) build kernel
 
 <br/>
 
@@ -114,7 +114,7 @@ if anything goes wrong check the "build.log" file
 <br/>
 
 (if not failed on previous step)
-### 10) collect your kernel package files, do test on some other linux box
+### 10) collect kernel package files, do test on some other Linux machine
 
 <br/>
 
