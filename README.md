@@ -1,14 +1,24 @@
 # bbrplus
 Linux BBRplus Kernel 4.14 Self-compiled Version  
-with nvme_core.io_timeout patch (otherwise will got long boot time on some VMs, like AWS EC2 5th-Gen)
+with nvme_core.io_timeout patch (otherwise may got long boot time on some VMs)
 
 <br/>
 <br/>
 <br/>
 
 ***based on original version***  
-https://github.com/cx9208/bbrplus
+https://github.com/cx9208/bbrplus 
+  
+<br/>
+<br/> 
 
+## some improvements as oct-2020
+
+###  i)   merged official v4.14 tcp_bbr patches between 2018-20 into bbrplus  
+###  ii)  keep official v4.14 tcp_bbr module in the kernel, now can do either  
+<br/>
+net.ipv4.tcp_congestion_control = bbrplus    or    net.ipv4.tcp_congestion_control = bbr   
+<br/>
 <br/>
 <br/>
 <br/>
@@ -19,33 +29,33 @@ https://github.com/cx9208/bbrplus
 <br/>
 
 ### 1) get convert patch on this repository, use git or direct download
-        (e.g., convert_official_linux-4.14.169+_src_to_bbrplus.patch)
+        (e.g., convert_official_linux-4.14.x_src_to_bbrplus.patch)
 
 <br/>
 <br/>
 
 ### 2) download officaial linux kernel
-        say 4.14.199        
-            wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.14.199.tar.gz
+        say 4.14.200        
+            wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.14.200.tar.gz
 
 <br/>
 <br/>
 
 ### 3) extract the tarball & cd extracted directory
-        tar zxvf linux-4.14.199.tar.gz && cd linux-4.14.199
+        tar zxvf linux-4.14.200.tar.gz && cd linux-4.14.200
 
 <br/>
 <br/>
 
 ### 4) copy convert patch to extracted kernel directory
         something like
-            cp ../convert_official_linux-4.14.169+_src_to_bbrplus.patch .
+            cp ../convert_official_linux-4.14.x_src_to_bbrplus.patch .
 
 <br/>
 <br/>
 
 ### 5) do the patch job
-        patch -p1 < convert_official_linux-4.14.169+_src_to_bbrplus.patch
+        patch -p1 < convert_official_linux-4.14.x_src_to_bbrplus.patch
 
 <br/>
 <br/>
