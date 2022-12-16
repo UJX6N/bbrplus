@@ -52,7 +52,7 @@ diff -ruaN a/include/net/inet_connection_sock.h b/include/net/inet_connection_so
 diff -ruaN a/net/ipv4/Kconfig b/net/ipv4/Kconfig
 --- a/net/ipv4/Kconfig	2022-10-26 19:17:14.000000000 +0800
 +++ b/net/ipv4/Kconfig	2022-11-12 21:11:01.891319293 +0800
-@@ -493,7 +493,7 @@
+@@ -503,7 +503,7 @@
  
  config TCP_CONG_CUBIC
  	tristate "CUBIC TCP"
@@ -61,7 +61,7 @@ diff -ruaN a/net/ipv4/Kconfig b/net/ipv4/Kconfig
  	---help---
  	This is version 2.0 of BIC-TCP which uses a cubic growth function
  	among other techniques.
-@@ -676,9 +676,18 @@
+@@ -686,9 +686,18 @@
  	bufferbloat, policers, or AQM schemes that do not provide a delay
  	signal. It requires the fq ("Fair Queue") pacing packet scheduler.
  
@@ -81,7 +81,7 @@ diff -ruaN a/net/ipv4/Kconfig b/net/ipv4/Kconfig
  	help
  	  Select the TCP congestion control that will be used by default
  	  for all connections.
-@@ -686,8 +695,8 @@
+@@ -696,8 +705,8 @@
  	config DEFAULT_BIC
  		bool "Bic" if TCP_CONG_BIC=y
  
@@ -92,7 +92,7 @@ diff -ruaN a/net/ipv4/Kconfig b/net/ipv4/Kconfig
  
  	config DEFAULT_HTCP
  		bool "Htcp" if TCP_CONG_HTCP=y
-@@ -713,6 +722,9 @@
+@@ -723,6 +732,9 @@
  	config DEFAULT_BBR
  		bool "BBR" if TCP_CONG_BBR=y
  
@@ -102,7 +102,7 @@ diff -ruaN a/net/ipv4/Kconfig b/net/ipv4/Kconfig
  	config DEFAULT_RENO
  		bool "Reno"
  endchoice
-@@ -727,7 +739,7 @@
+@@ -737,7 +749,7 @@
  config DEFAULT_TCP_CONG
  	string
  	default "bic" if DEFAULT_BIC
@@ -111,7 +111,7 @@ diff -ruaN a/net/ipv4/Kconfig b/net/ipv4/Kconfig
  	default "htcp" if DEFAULT_HTCP
  	default "hybla" if DEFAULT_HYBLA
  	default "vegas" if DEFAULT_VEGAS
-@@ -737,7 +749,8 @@
+@@ -747,7 +759,8 @@
  	default "dctcp" if DEFAULT_DCTCP
  	default "cdg" if DEFAULT_CDG
  	default "bbr" if DEFAULT_BBR
